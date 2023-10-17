@@ -1,0 +1,12 @@
+Estrutura de Controle de Fluxo
+
+São recursos fundamentais que permitem controle de execução de um programa.
+Elas determinam a ordem em que as instruções são executadas.
+
+Estruturas Condicionais
+    - if
+    - Permite que o programa execute se uma condição for verdadeira
+
+Estruturas Repetição
+    - switch
+    - Permite que execute uma função em um caso específico que seja igual o valor passado

@@ -1,0 +1,23 @@
+Variável
+- É uma forma constante de acesso a dados inconstantes
+- Aponta para o endereço onde existe o dados
+
+Concatenação 
+- É um processo de combinar ou unir duas ou mais sequências de caracteres e valores
+
+Interpolação
+- String com variáveis
+
+Múltiplos dados
+- Dados heterogêneos
+
+Tupla
+- É uma estrutura de dados que armazena um conjunto ordenado de valores
+- É imutável
+
+Dicionário
+- É uma estrutura que armazena pares de chave e valores
+- É mutável
+
+Lista
+- É uma estrutura que armazena pares de chave ordenados e valores acessados pela chave

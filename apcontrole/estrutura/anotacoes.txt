@@ -1,0 +1,10 @@
+Struct 
+
+Uma struct é um recurso em programação C# que representa
+um agrupamento de métodos e propriedades (dados heterogêneos) que
+são próprios de um indivíduo. 
+
+A struct disponibiliza de alguns métodos em comum com as classes
+e é uma forma mais leve de tratar dados do que o Dictionary, por exemplo
+
+
