@@ -3,6 +3,3 @@ Classes
 É um recurso computacional baseado em condições que possui suas peculariedades
 
 Uma classe é um tipo específico para minha regra de negócio
-
-
-sacar e trasferir

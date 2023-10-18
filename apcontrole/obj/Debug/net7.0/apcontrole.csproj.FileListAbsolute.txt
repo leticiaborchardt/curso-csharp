@@ -26,3 +26,17 @@
 /var/www/html/estudos/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.pdb
 /var/www/html/estudos/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.genruntimeconfig.cache
 /var/www/html/estudos/curso-csharp/apcontrole/obj/Debug/net7.0/ref/apcontrole.dll
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.GeneratedMSBuildEditorConfig.editorconfig
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.AssemblyInfoInputs.cache
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.AssemblyInfo.cs
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.csproj.CoreCompileInputs.cache
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.dll
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/refint/apcontrole.dll
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.pdb
+/var/www/html/estudos/C#/curso-csharp/apcontrole/bin/Debug/net7.0/apcontrole
+/var/www/html/estudos/C#/curso-csharp/apcontrole/bin/Debug/net7.0/apcontrole.deps.json
+/var/www/html/estudos/C#/curso-csharp/apcontrole/bin/Debug/net7.0/apcontrole.runtimeconfig.json
+/var/www/html/estudos/C#/curso-csharp/apcontrole/bin/Debug/net7.0/apcontrole.dll
+/var/www/html/estudos/C#/curso-csharp/apcontrole/bin/Debug/net7.0/apcontrole.pdb
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/apcontrole.genruntimeconfig.cache
+/var/www/html/estudos/C#/curso-csharp/apcontrole/obj/Debug/net7.0/ref/apcontrole.dll
