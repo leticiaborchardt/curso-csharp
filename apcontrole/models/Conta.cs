@@ -5,13 +5,26 @@ using System.Threading.Tasks;
 
 namespace apcontrole.models
 {
-    internal class ClassConta
+    internal class Conta
     {
-        public int Id { get; set; }
+        private static int _id;
+        private int Id { get; set; }
         public string Nome { get; set; }
         public decimal Saldo { get; set; }
 
-        internal decimal Depositar(decimal valor)
+        public Conta()
+        {
+            this.gerarId();
+        }
+
+        public Conta(string nome, decimal saldo)
+        {
+            this.Nome = nome;
+            this.Saldo = saldo;
+            this.gerarId();
+        }
+
+        internal virtual decimal Depositar(decimal valor)
         {
             this.Saldo += valor;
 
@@ -30,7 +43,7 @@ namespace apcontrole.models
             return false;
         }
 
-        internal bool Transferir(decimal valor, ClassConta contaDestino)
+        internal bool Transferir(decimal valor, Conta contaDestino)
         {
             if (this.Sacar(valor))
             {
@@ -45,6 +58,10 @@ namespace apcontrole.models
         public override string ToString()
         {
             return $"Id: {Id}\nNome: {Nome}\nSaldo: {Saldo}";
+        }
+        private void gerarId()
+        {
+            this.Id = ++_id;
         }
     }
 }
