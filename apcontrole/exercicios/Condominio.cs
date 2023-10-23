@@ -79,7 +79,6 @@ namespace apcontrole.exemploFinal
                 string funcaoFuncionario = Console.ReadLine();
 
                 return $"Funcionário - {funcaoFuncionario}";
-                
             }
 
             return $"Morador";

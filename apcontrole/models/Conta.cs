@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 
 namespace apcontrole.models
 {
-    internal class Conta
+    internal abstract class Conta
     {
         private static int _id;
         private int Id { get; set; }
+        public int Numero { get; set; }
         public string Nome { get; set; }
+        public string Titular { get; set; }
         public decimal Saldo { get; set; }
 
         public Conta()
@@ -24,14 +26,14 @@ namespace apcontrole.models
             this.gerarId();
         }
 
-        internal virtual decimal Depositar(decimal valor)
+        public virtual decimal Depositar(decimal valor)
         {
             this.Saldo += valor;
 
             return this.Saldo;
         }
 
-        internal bool Sacar(decimal valor)
+        public virtual bool Sacar(decimal valor)
         {
             if (valor <= this.Saldo)
             {
@@ -43,7 +45,7 @@ namespace apcontrole.models
             return false;
         }
 
-        internal bool Transferir(decimal valor, Conta contaDestino)
+        public bool Transferir(decimal valor, Conta contaDestino)
         {
             if (this.Sacar(valor))
             {
@@ -57,8 +59,9 @@ namespace apcontrole.models
 
         public override string ToString()
         {
-            return $"Id: {Id}\nNome: {Nome}\nSaldo: {Saldo}";
+            return $"Id: {Id}\nNome: {Nome}\nTitular: {Titular}\nSaldo: {Saldo}";
         }
+
         private void gerarId()
         {
             this.Id = ++_id;
