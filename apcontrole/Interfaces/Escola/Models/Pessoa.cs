@@ -10,5 +10,10 @@ namespace apcontrole.Interfaces.Escola.Models
         public string Matricula { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
+
+        public override string ToString()
+        {
+            return $"ID: {this.Id}\nNome: {this.Nome}\nSobrenome: {this.Sobrenome}\nCódigo da matrícula: {this.Matricula}";
+        }
     }
 }

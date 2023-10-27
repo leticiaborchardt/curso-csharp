@@ -8,9 +8,9 @@ namespace apcontrole.Interfaces.Escola.Services.AlunoServices
 {
     public interface ICrudAluno
     {
-        void Create(Aluno model);
-        List<Aluno> Read();
-        void Update(Aluno model);
+        Aluno Create();
+        void Read();
+        void Update(int id);
         void Delete(int id);
     }
 }

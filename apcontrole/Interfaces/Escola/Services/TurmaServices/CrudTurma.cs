@@ -13,7 +13,7 @@ namespace apcontrole.Interfaces.Escola.Services.TurmaServices
             Console.WriteLine("Turma criada!");
         }
 
-        public List<Turma> Read()
+        public void Read()
         {
             Console.WriteLine("Visualizar turma");
         }

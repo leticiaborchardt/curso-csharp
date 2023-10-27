@@ -13,7 +13,7 @@ namespace apcontrole.Interfaces.Escola.Services.MateriaServices
             Console.WriteLine("Matéria criada!");
         }
 
-        public List<Materia> Read()
+        public void Read()
         {
             Console.WriteLine("Visualizar matéria");
         }

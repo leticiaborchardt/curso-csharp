@@ -8,24 +8,77 @@ namespace apcontrole.Interfaces.Escola.Services.AlunoServices
 {
     public class CrudAluno : ICrudAluno
     {
-        public void Create(Aluno aluno)
+        private static List<Aluno> alunos = new List<Aluno>();
+
+        public Aluno Create()
         {
+            Aluno aluno = new Aluno();
+            aluno.Nome = RequisitarAtributo("nome");
+            aluno.Sobrenome = RequisitarAtributo("sobrenome");
+            aluno.Matricula = RequisitarAtributo("código de matrícula");
+
+            alunos.Add(aluno);
+
             Console.WriteLine("Aluno criado!");
+
+            return aluno;
         }
 
-        public List<Aluno> Read()
+        public void Read()
         {
-            Console.WriteLine("Visualizar aluno");
+            Console.WriteLine("Lista de alunos:\n");
+
+            if (alunos.Count == 0)
+            {
+                Console.WriteLine("Nenhum aluno registrado.");
+            }
+            else
+            {
+                foreach (Aluno aluno in alunos)
+                {
+                    Console.WriteLine(aluno.ToString() + "\n");
+                }
+            }
         }
 
-        public void Update(Aluno aluno)
+        public void Update(int id)
         {
-            Console.WriteLine("Aluno editado!");
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                if (alunos[i].Id == id)
+                {
+                    Console.WriteLine("Nome:");
+                    alunos[i].Nome = Console.ReadLine();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Aluno não encontrado.");
+                }
+            }
         }
 
         public void Delete(int id)
         {
-            Console.WriteLine("Aluno removido!");
+            for (int i = 0; i < alunos.Count; i++)
+            {
+                if (alunos[i].Id == id)
+                {
+                    alunos.RemoveAt(i);
+                    Console.WriteLine("Aluno removido!");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Aluno não encontrado.");
+                }
+            }
+        }
+
+        public string RequisitarAtributo(string atributo)
+        {
+            Console.WriteLine($"Digite o {atributo}:");
+            return Console.ReadLine();
         }
     }
 }

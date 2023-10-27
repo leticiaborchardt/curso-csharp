@@ -9,7 +9,7 @@ namespace apcontrole.Interfaces.Escola.Services.MateriaServices
     public interface ICrudMateria
     {
         void Create(Materia model);
-        List<Materia> Read();
+        void Read();
         void Update(Materia model);
         void Delete(int id);
     }

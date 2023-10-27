@@ -8,9 +8,9 @@ namespace apcontrole.Interfaces.Escola.Services.TurmaServices
 {
     public interface ICrudTurma
     {
-        void Create(Turma model);
-        List<Turma> Read();
-        void Update(Turma model);
-        void Delete(int id);
+    //     void Create(Turma model);
+    //     List<Turma> Read();
+    //     void Update(Turma model);
+    //     void Delete(int id);
     }
 }

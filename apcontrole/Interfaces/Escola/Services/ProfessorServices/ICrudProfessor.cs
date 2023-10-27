@@ -9,8 +9,8 @@ namespace apcontrole.Interfaces.Escola.Services.ProfessorServices
     public interface ICrudProfessor
     {
         Professor Create();
-        List<Professor> Read();
-        void Update(Professor model);
+        void Read();
+        void Update(int id);
         void Delete(int id);
     }
 }
