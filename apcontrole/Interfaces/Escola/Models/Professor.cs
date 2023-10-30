@@ -9,5 +9,17 @@ namespace apcontrole.Interfaces.Escola.Models
     {
         // Composição
         public List<Materia> Materias { get; set; }
+
+        public override string ToString()
+        {
+            string materias = "";
+            
+            foreach (var materia in this.Materias)
+            {
+                materias += $"\n{materia.Nome}";
+            }
+                
+            return base.ToString() + $"\nMatérias: {materias}";
+        }
     }
 }

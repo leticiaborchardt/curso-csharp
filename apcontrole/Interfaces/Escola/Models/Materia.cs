@@ -9,5 +9,10 @@ namespace apcontrole.Interfaces.Escola.Models
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }
+
+        public override string ToString()
+        {
+            return $"ID: {this.Id}\nNome: {this.Nome}\nDescrição: {this.Descricao}";
+        }
     }
 }

@@ -51,11 +51,9 @@ namespace apcontrole.Interfaces.Escola.Services.AlunoServices
                     alunos[i].Nome = Console.ReadLine();
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("Aluno não encontrado.");
-                }
             }
+
+            Console.WriteLine("Aluno não encontrado.");
         }
 
         public void Delete(int id)
@@ -66,13 +64,11 @@ namespace apcontrole.Interfaces.Escola.Services.AlunoServices
                 {
                     alunos.RemoveAt(i);
                     Console.WriteLine("Aluno removido!");
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Aluno não encontrado.");
+                    return;
                 }
             }
+
+            Console.WriteLine("Aluno não encontrado.");
         }
 
         public string RequisitarAtributo(string atributo)
