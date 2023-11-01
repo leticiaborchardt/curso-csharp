@@ -23,7 +23,7 @@ namespace Modulo4.Escola.Services
                 alunos.Add(aluno);
 
                 StreamWriter sw = new StreamWriter("Escola/Services/Aluno.txt", true);
-                sw.WriteLine(aluno);
+                sw.WriteLine($"{aluno.Id};{aluno.Matricula};{aluno.Nome};{aluno.Sobrenome}");
                 sw.Close();
 
                 Console.WriteLine("Aluno criado!");
@@ -38,34 +38,72 @@ namespace Modulo4.Escola.Services
 
         public List<Aluno> Read()
         {
-            Console.WriteLine("Lista de alunos:\n");
+            List<Aluno> lista = new List<Aluno>();
+            string linha;
 
-            if (alunos.Count == 0)
+            try
+            {
+                StreamReader sr = new StreamReader("Escola/Services/Aluno.txt");
+                linha = sr.ReadLine();
+
+                while (linha != null)
+                {
+                    var aluno = linha.Split(';');
+                    Aluno model = new Aluno { Id = Convert.ToInt32(aluno[0]), Matricula = aluno[1], Nome = aluno[2], Sobrenome = aluno[3] };
+                    lista.Add(model);
+                    linha = sr.ReadLine();
+                }
+
+                sr.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception: " + e.Message);
+            }
+
+            if (lista.Count == 0)
             {
                 Console.WriteLine("Nenhum aluno registrado.");
             }
             else
             {
-                foreach (Aluno aluno in alunos)
+                foreach (Aluno aluno in lista)
                 {
                     Console.WriteLine(aluno.ToString() + "\n");
                 }
             }
 
-            return alunos;
+            return lista;
         }
 
         public void Update(int id)
         {
-            Aluno? aluno = alunos.Find(x => x.Id == id);
+            List<Aluno> lista = this.Read();
+
+            Aluno? aluno = lista.Find(x => x.Id == id);
 
             if (aluno != null)
             {
-                aluno.Nome = RequisitarAtributo("novo nome");
-                aluno.Sobrenome = RequisitarAtributo("novo sobrenome");
-                aluno.Matricula = RequisitarAtributo("novo código de matrícula");
+                try
+                {
+                    StreamWriter sw = new StreamWriter("Escola/Services/Aluno.txt", false);
 
-                Console.WriteLine("Aluno atualizado com sucesso!");
+                    aluno.Nome = RequisitarAtributo("novo nome");
+                    aluno.Sobrenome = RequisitarAtributo("novo sobrenome");
+                    aluno.Matricula = RequisitarAtributo("novo código de matrícula");
+
+                    foreach (var alunoLista in lista)
+                    {
+                        sw.WriteLine($"{alunoLista.Id};{alunoLista.Matricula};{alunoLista.Nome};{alunoLista.Sobrenome}");
+                    }
+
+                    sw.Close();
+                    Console.WriteLine("Aluno atualizado com sucesso!");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception: " + e.Message);
+                }
             }
             else
             {
