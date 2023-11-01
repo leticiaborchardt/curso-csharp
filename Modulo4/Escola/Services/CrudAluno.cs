@@ -113,12 +113,29 @@ namespace Modulo4.Escola.Services
 
         public void Delete(int id)
         {
-            Aluno? aluno = alunos.Find(x => x.Id == id);
+            List<Aluno> lista = Read();
+            Aluno? aluno = lista.Find(x => x.Id == id);
 
             if (aluno != null)
             {
-                alunos.Remove(aluno);
-                Console.WriteLine("Aluno removido!");
+                try
+                {
+                    StreamWriter sw = new StreamWriter("Escola/Services/Aluno.txt", false);
+
+                    lista.Remove(aluno);
+
+                    foreach (var alunoLista in lista)
+                    {
+                        sw.WriteLine($"{alunoLista.Id};{alunoLista.Matricula};{alunoLista.Nome};{alunoLista.Sobrenome}");
+                    }
+
+                    sw.Close();
+                    Console.WriteLine("Aluno removido!");
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Exception: " + e.Message);
+                }
             }
             else
             {
