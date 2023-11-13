@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apcontrole", "apcontrole\apcontrole.csproj", "{96F85841-F147-4FB2-B83D-40928C5B1A7F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Arquitetura", "Arquitetura", "{806507C2-5D38-4CFD-A817-215802EEA0FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IsaakNewton.Data", "Arquitetura\IsaakNewton.Data\IsaakNewton.Data.csproj", "{A6E94566-ED5D-40A5-8999-7348C73A935C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +22,12 @@ Global
 		{96F85841-F147-4FB2-B83D-40928C5B1A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96F85841-F147-4FB2-B83D-40928C5B1A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96F85841-F147-4FB2-B83D-40928C5B1A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6E94566-ED5D-40A5-8999-7348C73A935C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6E94566-ED5D-40A5-8999-7348C73A935C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6E94566-ED5D-40A5-8999-7348C73A935C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6E94566-ED5D-40A5-8999-7348C73A935C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6E94566-ED5D-40A5-8999-7348C73A935C} = {806507C2-5D38-4CFD-A817-215802EEA0FA}
 	EndGlobalSection
 EndGlobal
