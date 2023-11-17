@@ -1,4 +1,4 @@
-﻿namespace IsaakNewton.Service.Client;
+﻿namespace IsaakNewton.Interfaces.Service.Client;
 
 public class Class1
 {
