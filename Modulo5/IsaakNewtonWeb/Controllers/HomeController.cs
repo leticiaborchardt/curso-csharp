@@ -1,10 +1,8 @@
 ﻿using System.Diagnostics;
-using IsackNewton.Data;
-using IsacNewton.Service.AgendamentoService.Implements;
 using Microsoft.AspNetCore.Mvc;
-using WebIsaakNewton.Models;
+using IsaakNewtonWeb.Models;
 
-namespace WebIsaakNewton.Controllers;
+namespace IsaakNewtonWeb.Controllers;
 
 public class HomeController : Controller
 {
@@ -16,26 +14,6 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Create()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    public IActionResult Create(Agendamento model)
-    {
-        CrudAgendamento crudAgendamento = new CrudAgendamento();    
-
-        crudAgendamento.Create(model);
-
-        return View();
-    }
-
-    public IActionResult Privacy()
     {
         return View();
     }

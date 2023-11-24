@@ -1,4 +1,4 @@
-namespace WebIsaakNewton.Models;
+namespace IsaakNewtonWeb.Models;
 
 public class ErrorViewModel
 {

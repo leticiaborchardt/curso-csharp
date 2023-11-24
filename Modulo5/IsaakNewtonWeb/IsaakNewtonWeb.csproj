@@ -10,4 +10,5 @@
     <ProjectReference Include="..\IsackNewton.Data\IsackNewton.Data.csproj" />
     <ProjectReference Include="..\IsacNewton.Service\IsacNewton.Service.csproj" />
   </ItemGroup>
+  
 </Project>
