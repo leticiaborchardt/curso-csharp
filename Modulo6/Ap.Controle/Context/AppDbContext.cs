@@ -9,10 +9,10 @@ namespace Ap.Controle.Context;
 
 public class AppDbContext : DbContext
 {
-    // public AppDbContext(DbContextOptionsBuilder options) : base(options)
-    // {
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
 
-    // }
+    }
 
     public DbSet<Condominio> Condominios;
     public DbSet<Morador> Moradores;
