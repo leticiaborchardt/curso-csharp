@@ -1,7 +1,7 @@
 ﻿using System.Data.SqlClient;
 using System.Data.SQLite;
 
-string caminhoDB = @"/var/www/html/estudos/C#/curso-csharp/Modulo6/Ap.Controle/Ap.ControleDb.sqlite3";
+string caminhoDB = @"/var/www/html/estudos/C#/curso-csharp/Modulo6/Ap.Controle/Ap.Controle.Db.sqlite3";
 
 // String de conexão do SQLite
 string connectionString = $"Data Source={caminhoDB};Version=3;";
