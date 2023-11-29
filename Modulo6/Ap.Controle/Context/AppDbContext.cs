@@ -14,6 +14,6 @@ public class AppDbContext : DbContext
 
     }
 
-    public DbSet<Condominio> Condominios;
-    public DbSet<Morador> Moradores;
+    public DbSet<Condominio> Condominios {get; set;}
+    public DbSet<Morador> Moradores {get; set;}
 }
