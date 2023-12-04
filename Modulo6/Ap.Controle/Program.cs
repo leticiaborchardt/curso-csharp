@@ -1,4 +1,5 @@
 using Ap.Controle.Context;
+using Ap.Controle.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,9 @@ builder.Services.AddControllersWithViews();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(connectionString)); 
+
+builder.Services.AddTransient<ICondominioRepository, CondominioRepository>();
+builder.Services.AddTransient<IMoradorRepository, MoradorRepository>();
 
 var app = builder.Build();
 

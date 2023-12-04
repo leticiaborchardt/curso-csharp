@@ -1,12 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Ap.Controle.Migrations;
 
 namespace Ap.Controle.Repositories
 {
     public interface ICondominioRepository
     {
-        
+        IEnumerable<Condominio> Condominios {get; set;}
+
     }
 }

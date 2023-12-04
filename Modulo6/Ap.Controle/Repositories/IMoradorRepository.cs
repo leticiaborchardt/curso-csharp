@@ -9,5 +9,7 @@ namespace Ap.Controle.Repositories
     public interface IMoradorRepository
     {
         IEnumerable<Morador> Moradores { get; set; }
+
+        Morador? GetMorador(int id);
     }
 }
