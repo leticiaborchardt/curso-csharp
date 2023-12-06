@@ -17,7 +17,7 @@ public class Condominio
     [Required(ErrorMessage = "O CNPJ deve ser preenchido")]
     [MinLength(18, ErrorMessage = "O CNPJ deve conter, no mínimo, 18 caracteres")]
     [MaxLength(18, ErrorMessage = "O CNPJ deve conter, no máximo, 18 caracteres")]
-    public string Cnpj { get; set; }
+    public string? Cnpj { get; set; }
 
-    public List<Morador> Moradores {get; set;}
+    public List<Morador>? Moradores {get; set;}
 }

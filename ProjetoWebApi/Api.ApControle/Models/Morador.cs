@@ -15,11 +15,11 @@ public class Morador
     public string Nome { get; set; }
 
     [Required(ErrorMessage = "O apartamento deve ser preenchido")]
-    public string Apartamento { get; set; }
+    public string? Apartamento { get; set; }
 
     [Required(ErrorMessage = "A taxa de condomínio deve ser preenchida")]
     [Column(TypeName = "decimal(10, 2)")]
-    public decimal TaxaCondominio { get; set; }
+    public decimal? TaxaCondominio { get; set; }
 
     [Required(ErrorMessage = "O condomínio deve ser informado")]
     public int CondominioId { get; set; }
