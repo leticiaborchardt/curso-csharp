@@ -1,12 +1,12 @@
-using Api.ApControle.Context;
-using Api.ApControle.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Api.ApControle.Models;
+using Api.ApControle.Context;
 
 namespace Api.ApControle.Controllers;
 
-[ApiController]
 [Route("api/[controller]")]
+[ApiController]
 public class CondominiosController : ControllerBase
 {
     private readonly AppDbContext _context;
@@ -17,26 +17,58 @@ public class CondominiosController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Condominio>>> GetCondominios()
+    public ActionResult<IEnumerable<Condominio>> GetCondominios()
     {
-        if (_context.Condominios == null)
+        var condominios = _context.Condominios.ToList();
+
+        if (condominios == null)
         {
             return NotFound();
         }
 
-        return await _context.Condominios.ToListAsync();
+        return condominios;
     }
 
-    [HttpGet("{id: int}")]
+    [HttpGet("{id:int}")]
     public ActionResult<Condominio> GetCondominio(int id)
     {
         var condominio = _context.Condominios.FirstOrDefault(c => c.Id == id);
 
         if (condominio == null)
         {
-            return NotFound();    
+            return NotFound();
         }
 
         return condominio;
+    }
+
+    [HttpPut("{id:int}")]
+    public ActionResult PutCondominio(int id, Condominio condominio)
+    {
+        if (id != condominio.Id)
+        {
+            return BadRequest("Os campos preenchidos estão diferentes da base de dados.");
+        }
+
+        _context.Entry(condominio).State = EntityState.Modified;
+        _context.SaveChanges();
+
+        return Ok(condominio);
+    }
+
+    [HttpDelete("{id:int}")]
+    public ActionResult DeleteCondominio(int id)
+    {
+        var condominio = _context.Condominios.FirstOrDefault(c => c.Id == id);
+
+        if (condominio == null)
+        {
+            return NotFound("Id não encontrado.");
+        }
+
+        _context.Condominios.Remove(condominio);
+        _context.SaveChanges();
+
+        return NoContent();
     }
 }
