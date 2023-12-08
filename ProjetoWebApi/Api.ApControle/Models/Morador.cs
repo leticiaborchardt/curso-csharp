@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Api.ApControle.Models;
 
@@ -22,8 +23,9 @@ public class Morador
     public decimal? TaxaCondominio { get; set; }
 
     [Required(ErrorMessage = "O condomínio deve ser informado")]
+    [ForeignKey("CondominioId")]
     public int CondominioId { get; set; }
 
-    [ForeignKey("CondominioId")]
+    [JsonIgnore]
     public virtual Condominio Condominio { get; set; }
 }

@@ -71,4 +71,18 @@ public class CondominiosController : ControllerBase
 
         return NoContent();
     }
+
+    [HttpPost]
+    public ActionResult PostCondominio(Condominio condominio)
+    {
+        if (condominio == null)
+        {
+            return BadRequest("Digite os dados do condomínio.");
+        }
+
+        _context.Condominios.Add(condominio);
+        _context.SaveChanges();
+
+        return Ok(condominio);
+    }
 }
