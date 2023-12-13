@@ -35,7 +35,7 @@ public class ContaBancariaTestes
 
         if (novoSaldo > saldoInicial)
         {
-            Console.WriteLine(" O saldo de saque e maior qu o valor em conta.");
+            Console.WriteLine("O saldo de saque e maior que o valor em conta.");
         }
 
         novoSaldo = conta.Sacar(-valorTeste);

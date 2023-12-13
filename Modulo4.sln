@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modulo4", "Modulo4\Modulo4.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modulo5", "Modulo5", "{F5DE19AF-B258-4476-8C5E-2D20631418D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIsaakNewton", "Modulo5\WebIsaakNewton\WebIsaakNewton.csproj", "{9DE54866-CE03-4741-9DAB-93E8AC243D3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebIsaakNewton", "Modulo5\IsaakNewtonWeb\IsaakNewtonWeb.csproj", "{9DE54866-CE03-4741-9DAB-93E8AC243D3A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modulo6", "Modulo6", "{CF5E7ABD-CEEB-4831-944A-86F20F6FFB06}"
 EndProject
@@ -17,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDbApp", "Modulo6\Con
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{9E331FEA-36A0-450E-8C95-9931D07ADA09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcessionariaZils", "EntityFramework\ConcessionariaZils\ConcessionariaZils.csproj", "{F6A9632E-F11F-4229-84B0-CB6D60E924D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcessionariaZils", "EntityFrameworkApp\ConcessionariaZils\ConcessionariaZIls.csproj", "{F6A9632E-F11F-4229-84B0-CB6D60E924D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDb", "EntityFramework\ConsoleAppDb\ConsoleAppDb.csproj", "{D12CFF30-0184-45F0-A99A-5276F8F61D89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDb", "EntityFrameworkApp\ConsoleAppDb\ConsoleAppDb.csproj", "{D12CFF30-0184-45F0-A99A-5276F8F61D89}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjetoWebApi", "ProjetoWebApi", "{B4D754EE-8B08-4AE4-8F02-12DB63F7235A}"
 EndProject
