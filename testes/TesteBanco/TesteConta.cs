@@ -1,15 +1,21 @@
-using BancoTeste;
+using Banco;
 
-namespace NUnitTesteBanco;
+namespace TesteBanco;
 
 [TestFixture]
 public class TesteConta
 {
+    Conta conta;
+
+    [SetUp]
+    public void Setup()
+    {
+        conta = new Conta("090.989.458-12", 1000);
+    }
+
     [Test]
     public void TestarSaque()
     {
-        Conta conta = new Conta("123", 500);
-
         bool resultado = conta.Sacar(300);
 
         Assert.IsTrue(resultado);
@@ -20,8 +26,6 @@ public class TesteConta
     [Test]
     public void TestarSaqueSemSaldo()
     {
-        Conta conta = new Conta("123", 0);
-
         bool resultado = conta.Sacar(1000);
 
         Assert.IsFalse(resultado);
@@ -30,10 +34,17 @@ public class TesteConta
     }
 
     [Test]
+    [Ignore("Pendência de implementação de retorno false para saques negativos.")]
+    public void TestarSaqueNegativo()
+    {
+        bool resultado = conta.Sacar(-200);
+
+        Assert.IsFalse(resultado);
+    }
+
+    [Test]
     public void TestarDeposito()
     {
-        Conta conta = new Conta("123", 500);
-
         bool resultado = conta.Depositar(300);
 
         Assert.IsTrue(resultado);

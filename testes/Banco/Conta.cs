@@ -1,4 +1,4 @@
-﻿namespace BancoTeste;
+﻿namespace Banco;
 
 public class Conta
 {
